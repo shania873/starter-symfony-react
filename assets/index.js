@@ -5,6 +5,7 @@ import {Routes, Route, Switch,Navigate, Link, withRouter} from 'react-router-dom
 import Users from './component/Users';
 import Posts from './component/Posts';
 import Home from './component/Home';
+import App from './app';
 class Index extends Component {
     
     render() {
@@ -19,16 +20,15 @@ class Index extends Component {
                            </li>
     
                            <li className="nav-item">
-                               <Link className={"nav-link"} to={"/home"}> Users gfdgdf</Link>
+                               <Link className={"nav-link"} to={"/users"}> Users</Link>
                            </li>
                        </ul>
                    </div>
                </nav>
-               <Routes>
-                   {/* <Navigate exact from="/" to="/users" /> */}
-                   <Route path="/" element={<Index />} />
-                   <Route path="/home" element={<Home />} />
+               <Routes>    
+                   <Route path="/" element={<Home />} />
                    <Route path="/posts" element={<Posts />} />
+                   <Route path="/users" element={<Users />} />
                </Routes>          
              </div>
         )

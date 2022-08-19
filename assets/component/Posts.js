@@ -16,10 +16,10 @@ class Posts extends Component {
     }
     
     getPosts() {
-        axios.get(`https://127.0.0.1:8000/api/users`).then(res => {
-            const posts = res.data.slice(0,15);
-            this.setState({ posts, loading: false })
-            console.log(posts)
+        axios.get(`https://127.0.0.1:8000/session`).then(res => {
+            // const posts = res.data.slice(0,15);
+            // this.setState({ posts, loading: false })
+            console.log(res)
         })
     }
     
